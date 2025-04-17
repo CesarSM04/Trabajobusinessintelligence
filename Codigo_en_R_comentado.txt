@@ -17,6 +17,23 @@ library(tidyr)
 library(forcats)
 library(scales)
 library(shinycssloaders)
+
+# Lista de librerías que quieres verificar
+librerias <- c(
+  "shiny", "shinydashboard", "ggplot2", "plotly", "DT",
+  "wordcloud2", "tm", "shinythemes", "readxl", "dplyr",
+  "tidytext", "stringr", "tidyr", "forcats", "scales", "shinycssloaders"
+)
+
+# Verificar cuáles están instaladas
+no_instaladas <- librerias[!librerias %in% installed.packages()[,"Package"]]
+
+#Instalar todas las librerías que sean necesarias
+if (length(no_instaladas) > 0) {
+  install.packages(no_instaladas)
+}
+
+
 # ---# ---# -----------------------------------------------------------
 # Carga y preprocesamiento de datos
 # ----------------
