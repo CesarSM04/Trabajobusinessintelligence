@@ -16,14 +16,14 @@ library(forcats)
 library(scales)
 library(shinycssloaders)
 
-# Lista de librerías que quieres verificar
+# Codigo para la verificación de las librerías
 librerias <- c(
   "shiny", "shinydashboard", "ggplot2", "plotly", "DT",
   "wordcloud2", "tm", "shinythemes", "readxl", "dplyr",
   "tidytext", "stringr", "tidyr", "forcats", "scales", "shinycssloaders"
 )
 
-# Verificar cuáles están instaladas
+# Código para saber que librerias están instaladas
 no_instaladas <- librerias[!librerias %in% installed.packages()[,"Package"]]
 
 #Instalar todas las librerías que sean necesarias
